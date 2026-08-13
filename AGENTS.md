@@ -6,6 +6,14 @@ Project Lumen uses AI to help identify, transcribe, translate, and investigate
 digitized manuscripts. Historical importance is the selection criterion. Do not
 prioritize a subject because it is personally interesting to the founder.
 
+The Grand Discovery Program is the primary research track. Scholar-specific
+workstreams, including the Donlan track, are bounded side investigations. Never
+allow one scholar, person, language, country, religion, or period to dominate
+the subject-neutral search for historically consequential material.
+
+Potentially unedited and untranslated material is a priority only when its
+contents could matter. Translation absence alone is not historical importance.
+
 ## Evidence rules
 
 - Treat model output as a lead, never as a discovery.
@@ -20,6 +28,11 @@ prioritize a subject because it is personally interesting to the founder.
 - Do not publish or redistribute manuscript images unless rights have been
   checked and permission obtained where required.
 - Keep rejected hypotheses in the audit trail.
+- Distinguish `not translated into English`, `not translated into any modern
+  language`, `not edited in the original`, and `not discussed in scholarship`.
+  These are separate claims requiring separate evidence.
+- Never infer unstudied status from sparse catalog metadata or absence from an
+  English-language search.
 
 ## Repository workflow
 
@@ -32,6 +45,8 @@ prioritize a subject because it is personally interesting to the founder.
 - Do not commit raw catalog caches, restricted study images, databases, secrets,
   or generated archives.
 - Prefer small, reviewable changes and preserve source provenance.
+- Maintain broad-search and focused-investigation queues separately. Advancing
+  a focused track must not silently suspend the Grand Discovery Program.
 
 ## Required completion report
 
@@ -56,4 +71,3 @@ State the highest claim level reached, from L0 through L5, and why.
 
 Provide one ready-to-paste prompt for the next bounded task. Do not propose a
 public discovery announcement unless the work has reached L5.
-
