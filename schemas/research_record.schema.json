@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://projectlumen.example/schemas/research_record.schema.json",
+  "title": "Project Lumen Research Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "source",
+    "document",
+    "transcriptions",
+    "claims",
+    "rights"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^LUMEN-[A-Z0-9._-]+$"
+    },
+    "source": {
+      "type": "object",
+      "required": ["institution", "shelfmark", "source_url"],
+      "properties": {
+        "institution": {"type": "string"},
+        "collection": {"type": "string"},
+        "shelfmark": {"type": "string"},
+        "source_url": {"type": "string", "format": "uri"},
+        "iiif_manifest": {"type": ["string", "null"], "format": "uri"},
+        "folio": {"type": ["string", "null"]},
+        "region": {
+          "type": ["object", "null"],
+          "properties": {
+            "x": {"type": "number"},
+            "y": {"type": "number"},
+            "width": {"type": "number"},
+            "height": {"type": "number"}
+          },
+          "required": ["x", "y", "width", "height"],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "title": {"type": ["string", "null"]},
+        "date_not_before": {"type": ["integer", "null"]},
+        "date_not_after": {"type": ["integer", "null"]},
+        "languages": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "scripts": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "document_type": {"type": ["string", "null"]},
+        "catalog_description": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "transcriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "text", "status", "created_by"],
+        "properties": {
+          "kind": {
+            "enum": ["diplomatic", "expanded", "normalized", "translation_literal", "translation_readable"]
+          },
+          "text": {"type": "string"},
+          "language": {"type": ["string", "null"]},
+          "status": {
+            "enum": ["model", "candidate", "human_corrected", "expert_reviewed"]
+          },
+          "created_by": {"type": "string"},
+          "unclear_spans": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "statement",
+          "level",
+          "confidence",
+          "evidence",
+          "alternatives",
+          "status"
+        ],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "statement": {"type": "string"},
+          "level": {"enum": ["L0", "L1", "L2", "L3", "L4", "L5"]},
+          "confidence": {"enum": ["unknown", "weak", "plausible", "substantial", "strong"]},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["type", "locator", "description"],
+              "properties": {
+                "type": {"type": "string"},
+                "locator": {"type": "string"},
+                "description": {"type": "string"},
+                "supports": {"type": "boolean"}
+              },
+              "additionalProperties": false
+            }
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "status": {
+            "enum": ["open", "corroborated", "rejected", "published", "retracted"]
+          },
+          "falsification_test": {"type": ["string", "null"]},
+          "novelty_search": {"type": ["string", "null"]},
+          "reviewers": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["image_use", "derived_text_use", "checked_on"],
+      "properties": {
+        "image_use": {
+          "enum": ["unknown", "study_only", "permission_required", "licensed", "open"]
+        },
+        "derived_text_use": {
+          "enum": ["unknown", "permission_required", "citation_permitted", "licensed", "open"]
+        },
+        "checked_on": {"type": "string", "format": "date"},
+        "terms_url": {"type": ["string", "null"], "format": "uri"},
+        "notes": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "audit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "actor", "action"],
+        "properties": {
+          "timestamp": {"type": "string", "format": "date-time"},
+          "actor": {"type": "string"},
+          "action": {"type": "string"},
+          "details": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

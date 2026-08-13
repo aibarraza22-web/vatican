@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+.DS_Store
+
+# Catalog responses and study images are local research material, not releases.
+data/grand_survey_batch_*/cache/
+data/grand_survey_batch_*/detail_cache/
+research/
+

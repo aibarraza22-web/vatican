@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-lumen"
+version = "0.1.0"
+description = "Evidence-first research ledger for AI-assisted manuscript study"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Project Lumen"}]
+
+[project.scripts]
+lumen = "project_lumen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

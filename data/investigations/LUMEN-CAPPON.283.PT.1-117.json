@@ -1,0 +1,125 @@
+{
+  "record_id": "LUMEN-CAPPON.283.PT.1-117",
+  "source": {
+    "institution": "Biblioteca Apostolica Vaticana",
+    "collection": "Capponiani",
+    "shelfmark": "Cappon.283.pt.1",
+    "source_url": "https://www.mss.vatlib.it/gui/console?id=249062&service=shortDetail",
+    "iiif_manifest": "https://digi.vatlib.it/iiif/MSS_Cappon.283.pt.1/manifest.json",
+    "folio": "117r-118r",
+    "region": null
+  },
+  "document": {
+    "title": "Letter of Filippo Bruni and note concerning a manuscript attributed to Cecco d'Ascoli",
+    "date_not_before": 1745,
+    "date_not_after": 1745,
+    "languages": [
+      "Italian"
+    ],
+    "scripts": [
+      "Latin cursive"
+    ],
+    "document_type": "letter with enclosed manuscript description",
+    "catalog_description": "Lettera di Filippo Bruni con notizie su un manoscritto con un inedito di Cecco di Ascoli"
+  },
+  "transcriptions": [
+    {
+      "kind": "normalized",
+      "text": "Questa opera però, detta l'Acerba, è stampata. La presente mai si è veduta; il metro lo stesso, il carattere, la carta la provano di Cecco.",
+      "language": "Italian",
+      "status": "candidate",
+      "created_by": "Project Lumen model-assisted reading, 2026-07-26",
+      "unclear_spans": []
+    },
+    {
+      "kind": "translation_literal",
+      "text": "This work, however, called L'Acerba, is printed. The present one has never been seen; the same meter, the script, and the paper prove it to be by Cecco.",
+      "language": "English",
+      "status": "candidate",
+      "created_by": "Project Lumen model-assisted translation, 2026-07-26",
+      "unclear_spans": [
+        "The referent of 'la presente' requires expert confirmation."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CAPPON283-C1",
+      "statement": "The 1745 note explicitly distinguishes printed L'Acerba from the manuscript then under discussion.",
+      "level": "L1",
+      "confidence": "substantial",
+      "evidence": [
+        {
+          "type": "manuscript text",
+          "locator": "Cappon.283.pt.1, f. 117v",
+          "description": "The note says L'Acerba is printed and then says 'la presente mai si è veduta.'",
+          "supports": true
+        },
+        {
+          "type": "textual concordance",
+          "locator": "L'Acerba, chapter VI",
+          "description": "The immediately preceding quoted verses match the known text of L'Acerba.",
+          "supports": true
+        }
+      ],
+      "alternatives": [
+        "The phrase 'la presente' may refer to a particular witness or version of L'Acerba rather than a separate work."
+      ],
+      "status": "open",
+      "falsification_test": "Independent transcription and syntactic analysis of ff. 117r-117v.",
+      "novelty_search": "Initial exact-phrase, shelfmark, author, catalog, and manuscript-census searches completed on 2026-07-26; no scholarly discussion of this specific claim located.",
+      "reviewers": []
+    },
+    {
+      "claim_id": "CAPPON283-C2",
+      "statement": "A manuscript presented in 1745 as an unpublished and separate work of Cecco d'Ascoli may be lost, dispersed, or cataloged under another identity.",
+      "level": "L2",
+      "confidence": "plausible",
+      "evidence": [
+        {
+          "type": "cover letter",
+          "locator": "Cappon.283.pt.1, f. 118r",
+          "description": "Bruni appears to send or arrange inspection of a physical manuscript.",
+          "supports": true
+        },
+        {
+          "type": "manuscript description",
+          "locator": "Cappon.283.pt.1, ff. 117r-117v",
+          "description": "The enclosed note calls the item unpublished and distinguishes it from printed L'Acerba.",
+          "supports": true
+        },
+        {
+          "type": "collection catalog",
+          "locator": "Catalogo della Libreria Capponi (1747), manuscript appendix",
+          "description": "No searchable Cecco, Acerba, or Ascoli entry was found.",
+          "supports": true
+        }
+      ],
+      "alternatives": [
+        "The object was an ordinary or unusual L'Acerba witness.",
+        "The attribution and antiquity were eighteenth-century errors.",
+        "The manuscript was returned to its owner and survives elsewhere.",
+        "The manuscript is in the Vatican or another collection under an unidentified title."
+      ],
+      "status": "open",
+      "falsification_test": "Locate the object or a fuller description and compare its text against the L'Acerba tradition and Cecco's authenticated works.",
+      "novelty_search": "Initial web, Vatican catalog, Capponi 1747 catalog, Cozzo 1897 catalog, and general Cecco bibliography searches completed; specialist databases and critical-edition review remain.",
+      "reviewers": []
+    }
+  ],
+  "rights": {
+    "image_use": "study_only",
+    "derived_text_use": "unknown",
+    "checked_on": "2026-07-26",
+    "terms_url": "https://digi.vatlib.it/mss/",
+    "notes": "Study images are excluded from the distributable package. Publication permissions must be checked separately."
+  },
+  "audit": [
+    {
+      "timestamp": "2026-07-26T00:00:00Z",
+      "actor": "Project Lumen",
+      "action": "record created",
+      "details": "Created after first image-level investigation and initial provenance search."
+    }
+  ]
+}
