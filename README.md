@@ -22,6 +22,9 @@ Lumen will systematically identify promising material, produce auditable
 transcriptions and translations, test historical hypotheses, and publish only
 claims that survive adversarial review.
 
+The primary program is the subject-neutral **Grand Discovery Program**. The
+Donlan source census is one bounded test case, not the project's central topic.
+
 ## Initial research frontier
 
 The first discovery campaign is subject-neutral. It searches for the highest
@@ -37,6 +40,11 @@ plausible historical impact across all accessible collections, especially:
 - references to lost works, unknown intermediaries, or hidden networks;
 - manuscripts whose digital records have sparse descriptions or thin
   bibliographies.
+- potentially important texts never edited in the original language or never
+  translated into a modern language, provided that status is actually verified;
+- underrepresented languages and traditions whose low search visibility may
+  conceal important scientific, political, religious, literary, legal,
+  diplomatic, medical, geographic, or social evidence.
 
 No topic, region, institution, or historical period receives priority merely
 because it is personally interesting. Famous manuscripts may be used as
@@ -75,6 +83,8 @@ impact ceiling.
 - `docs/PROJECT_CHARTER.md`: mission, organization, and 90-day launch.
 - `docs/RESEARCH_PROTOCOL.md`: end-to-end scholarly workflow.
 - `docs/HIGH_IMPACT_SEARCH.md`: grand-prize discovery classes and triage.
+- `docs/GRAND_DISCOVERY_PROGRAM.md`: the primary unknown-document discovery
+  workflow, verification gates, and first Codex operation.
 - `docs/FIRST_SURVEY_REPORT.md`: live reconnaissance results and first leads.
 - `docs/INVESTIGATION_001_CECCO.md`: first image-level investigation dossier.
 - `docs/DONLAN_EVIDENCE_GAP_MAP.md`: a bounded research track testing whether
@@ -82,6 +92,7 @@ impact ceiling.
 - `docs/PUBLICATION_STANDARD.md`: rules for public claims and papers.
 - `data/corpus_registry.csv`: initial collection-level reconnaissance.
 - `data/investigations/`: structured evidence and claim records.
+- `data/discovery_queue_template.csv`: fields for ranking exact document leads.
 - `schemas/research_record.schema.json`: machine-readable research record.
 - `src/project_lumen/`: dependency-free SQLite research ledger and CLI.
 - `tests/`: integrity tests for the ledger and scoring system.

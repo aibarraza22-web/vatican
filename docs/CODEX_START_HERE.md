@@ -109,3 +109,9 @@ The Cecco investigation and the Thomas A. Donlan research track are separate.
 To work on the latter, read `docs/DONLAN_EVIDENCE_GAP_MAP.md` and use the bounded
 prompt at the end of that file. Do not imply that any exact Vatican document is
 unpublished or untranslated until the source census is complete.
+
+## 9. Primary Grand Discovery track
+
+The Donlan workstream must not replace the main search. For broad discovery,
+read `docs/GRAND_DISCOVERY_PROGRAM.md` and use its first bounded prompt. Maintain
+separate output paths for broad discovery and scholar-specific work.
